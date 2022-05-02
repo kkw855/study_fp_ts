@@ -1,0 +1,30 @@
+{
+  "name": "study_fp_ts",
+  "version": "1.0.0",
+  "description": "study fp-ts",
+  "main": "index.ts",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "yarn run type-check -- --watch",
+    "build": "yarn run build:types && yarn run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
+    "start": "nodemon --exec babel-node ./src/index.ts --extensions .ts"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.17.10",
+    "@babel/node": "^7.17.10",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.4.1",
+    "fp-ts": "^2.12.1",
+    "jest": "^28.0.3",
+    "nodemon": "^2.0.16",
+    "ts-jest": "^27.1.4",
+    "typescript": "^4.6.4"
+  }
+}
