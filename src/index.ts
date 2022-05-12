@@ -135,3 +135,13 @@ const eqPoint: Eq<Point> = {
 const point1: Point = { x: 1, y: 1}
 const point2: Point = { x: 1, y: 2}
 console.log(eqPoint.equals(point1, point2))
+
+export interface Eq<A> {
+  readonly equals: (x: A, y: A) => boolean
+}
+
+const eqN: Eq<number> = {
+  equals: (x, y) => x === y
+}
+console.log(eqN.equals(3, 3))
+
