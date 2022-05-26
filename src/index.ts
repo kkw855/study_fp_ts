@@ -1,7 +1,5 @@
 "use strict";
 
-import sum from "./sum";
-
 export function sayMyName(name: string): void {
   if (name === "Heisenberg") {
     console.log("You're right 👍");
@@ -145,3 +143,4 @@ const eqN: Eq<number> = {
 }
 console.log(eqN.equals(3, 3))
 
+type Heroes = 'Hulk' | 'Thor' | 'Capt';
