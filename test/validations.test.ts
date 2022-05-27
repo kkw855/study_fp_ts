@@ -9,4 +9,7 @@ test('validate windows path', () => {
   expect(validatePathOnWindows('Z:\\a<c')).toEqual(false);
   expect(validatePathOnWindows('Z:\\a?c')).toEqual(false);
   expect(validatePathOnWindows('abc.txt')).toEqual(false);
+
+  expect(validatePathOnWindows('abc.txt', ',.')).toEqual(false);
+  expect(validatePathOnWindows('abc,txt', ',.')).toEqual(false);
 });
