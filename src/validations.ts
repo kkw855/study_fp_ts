@@ -6,7 +6,7 @@ export function validatePathOnWindows(s: string, exclusions: string = '/:*?"<>|'
   // return regex.test(s)
 
   // TODO: 함수가 호출될 때마다 컴파일 발생!!! 캐쉬 기능으로 방지 가능할 듯
-  const a = new RegExp('[a-zA-Z]:((?![' + exclusions + '])(?!\\\\{2,}).)*$')
-  return a.test(s)
+  const regex = new RegExp('[a-zA-Z]:((?![' + exclusions + '])(?!\\\\{2,}).)*$')
+  return regex.test(s)
 }
 
